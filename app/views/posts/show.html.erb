@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
-
+<h1>予定詳細</h1>
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-  <strong>Start date:</strong>
+  <strong>開始日:</strong>
   <%= @post.start_date %>
 </p>
 
 <p>
-  <strong>End date:</strong>
+  <strong>終了日:</strong>
   <%= @post.end_date %>
 </p>
 
 <p>
-  <strong>All day:</strong>
-  <%= @post.all_day %>
+  <strong>終日:</strong>
+  <%= @post.all_day ? ' ◯ ': ' '%>
 </p>
 
 <p>
-  <strong>Memo:</strong>
+  <strong>メモ:</strong>
   <%= @post.memo %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to '編集', edit_post_path(@post) %> |
+<%= link_to 'スケジュール一覧', posts_path %>
